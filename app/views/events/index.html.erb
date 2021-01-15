@@ -42,7 +42,7 @@
     </div>
 
 
-    <%= week_calendar events: @events do |date, events| %>
+    <%= month_calendar events: @events do |date, events| %>
       <%= date.day %>
 
       <% events.each do |event| %>
