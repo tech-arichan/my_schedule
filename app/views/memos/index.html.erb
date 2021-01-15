@@ -1,13 +1,17 @@
 <h1><%= link_to '新規メモ', new_memo_path %></h1>
 
+<%= link_to 'トップへ戻る', root_path %>
 
 -------------------
 <h1>メモ一覧</h1>
 
 <% @memos.reverse_each do |memo| %>
- <ul>
-     <li>
-       <%= memo.memo %>
-     </li>
+ <ul class="memo_ul">
+    <li>
+      <%= memo.memo %>
+    </li>
+    <li>
+<%= link_to '削除', memo_path(memo.id), method: :delete %>    </li>
  </ul>
 <% end %>
+
