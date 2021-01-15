@@ -1,0 +1,16 @@
+<h1>メモ登録</h1>
+<%= form_with model: @memo, local: true do |f| %>
+  <div class='field'>
+    <div class='field-input'>
+      <%= f.text_field :memo %>
+    </div>
+    <div class='actions'>
+      <%= f.submit "入力", class: 'btn'%>
+    </div>
+  </div>
+<% end %>
+-----------------
+<div>
+<%= link_to 'トップへ戻る', root_path %>
+<%= link_to 'メモ一覧', memos_path %>
+</div>

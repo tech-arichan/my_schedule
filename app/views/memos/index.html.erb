@@ -1,0 +1,13 @@
+<h1><%= link_to '新規メモ', new_memo_path %></h1>
+
+
+-------------------
+<h1>メモ一覧</h1>
+
+<% @memos.reverse_each do |memo| %>
+ <ul>
+     <li>
+       <%= memo.memo %>
+     </li>
+ </ul>
+<% end %>
