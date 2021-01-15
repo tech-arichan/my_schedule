@@ -41,8 +41,17 @@
       </div>
     </div>
 
-    <hr style="border:0;border-top:1px solid red;">
 
+    <%= week_calendar events: @events do |date, events| %>
+      <%= date.day %>
+
+      <% events.each do |event| %>
+      <div>
+        <%= link_to "#{event.title}", "/"  %>
+      </div>
+
+      <% end %>
+    <% end %>
 
     <div class="tbd">
       <ul class="">

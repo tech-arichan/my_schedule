@@ -1,12 +1,18 @@
 <div class="simple-calendar">
-  <div class="calendar-heading">
-    <%= link_to t('simple_calendar.previous', default: 'Previous'), calendar.url_for_previous_view %>
-    <% if calendar.number_of_weeks == 1 %>
-      <span class="calendar-title">Week <%= calendar.week_number %></span>
-    <%else%>
-        <span class="calendar-title">Week <%= calendar.week_number %> - <%= calendar.end_week %></span>
-    <%end%>
-        <%= link_to t('simple_calendar.next', default: 'Next'), calendar.url_for_next_view %>
+  <div class="calendar-header">
+    <div class="calendar-heading">
+      <%= link_to t('simple_calendar.previous', default: '前週'), calendar.url_for_previous_view %>
+      <% if calendar.number_of_weeks == 1 %>
+        <span class="calendar-title"> 今週</span>
+      <%else%>
+          <span class="calendar-title">今週 <%= calendar.week_number %> - <%= calendar.end_week %></span>
+      <%end%>
+          <%= link_to t('simple_calendar.next', default: '翌週'), calendar.url_for_next_view %>
+    </div>
+
+    <div class="">
+        <p>表示変更:<%= link_to '月', "/" %></p>    
+    </div>
   </div>
 
   <table class="table table-striped">
