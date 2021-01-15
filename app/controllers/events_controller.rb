@@ -1,4 +1,6 @@
 class EventsController < ApplicationController
+  before_action :set_event, only: [:show]
+
   def index
     @events = Event.all
   end
@@ -12,10 +14,17 @@ class EventsController < ApplicationController
     redirect_to root_path
   end
 
+  def show
+  end
+
   private
 
   def event_parameter
     params.require(:event).permit(:title, :content, :start_time).merge(user_id: current_user.id)
+  end
+
+  def set_event
+    @event = Event.find(params[:id])
   end
 
 end

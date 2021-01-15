@@ -1,0 +1,19 @@
+<div class="">
+  <div class="">
+    <ul class="">
+      <li> タイトル:<%= @event.title %> </li>
+      <li> 内容:<%= @event.content %> </li>
+      <li> 投稿日時:<%= @event.start_time %> </li>
+    </ul>
+  </div>
+  
+  <ul class="">
+    <li>
+      <%= link_to '編集', edit_event_path(@event.id), method: :get %>
+    </li>
+    <li>
+      <%= link_to '削除', event_path(@event.id), method: :delete %>
+    </li>
+  </ul>
+    <%= link_to 'トップへ戻る', root_path %>
+</div>

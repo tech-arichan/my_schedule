@@ -47,7 +47,7 @@
 
       <% events.each do |event| %>
       <div>
-        <%= link_to "#{event.title}", "/"  %>
+        <%= link_to "#{event.title}", event_path(event.id), method: :get  %>
       </div>
 
       <% end %>
