@@ -1,1 +1,53 @@
-TOP
+<div class="wrapper">
+  
+  <div class="side-bar">
+    <div class="side-bar-header">
+      <div class="header-name">
+        <%= link_to 'My Calendar', "/" %>
+      </div>
+    </div>
+
+    <div class="others">
+      <div class="other">
+        <div class="other-name">
+          <a href="#">タスク</a>
+        </div>
+      </div>
+      <div class="other">
+        <div class="other-name">
+        <%= link_to 'メモ', "#" %>
+        </div>
+      </div>
+      <div class="other">
+        <div class="other-name">
+          <a href="#">資料庫</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="main">
+    <div class="main-header">
+      <div class="left-header">
+        <div class="header-title">
+          <%= link_to 'イベント追加', "/", class: "add-event"%>
+        </div>
+      </div>
+      <div class="right-header">
+        <div class="header-button">
+        <%= link_to current_user.name, "/" %>
+
+        </div>
+      </div>
+    </div>
+
+    <hr style="border:0;border-top:1px solid red;">
+
+
+    <div class="tbd">
+      <ul class="">
+
+      </ul>
+    </div>
+  </div>
+</div>
