@@ -50,5 +50,6 @@ test:
 production:
   <<: *default
   database: my_schedule_production
-  username: my_schedule
-  password: <%= ENV['MY_SCHEDULE_DATABASE_PASSWORD'] %>
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>
+  socket: /var/lib/mysql/mysql.sock
