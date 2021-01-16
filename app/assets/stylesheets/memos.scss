@@ -2,6 +2,51 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.memo_ul {
+// メモ トップ
+
+.memo-header {
   display: flex;
+  justify-content: space-between;
+  border-bottom:3px solid #ccc;
+  padding: 10px;
 }
+
+.memo-head-right {
+  display: flex;
+  align-items: center;
+}
+
+.memo-head-right h1 {
+  font-size: 20px;
+}
+
+.memo-head-left {
+  display: flex;
+  align-items: center;
+}
+
+.memo-head-right h2 {
+  padding-left: 20px;
+}
+
+.memo-table {
+  font-size: 15px;
+  border-bottom:1px solid #ccc;
+  text-align:left;
+  padding:10px 10px;
+}
+
+.memo-content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.memo-content h3 {
+  margin-right: 20px;
+}
+
+a {
+  text-decoration: none;
+}
+
+// メモ トップ //
