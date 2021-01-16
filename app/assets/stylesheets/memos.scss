@@ -50,3 +50,23 @@ a {
 }
 
 // メモ トップ //
+
+.memo-form {
+  margin: 5px 0 5px 10px;
+}
+
+.memo-btn {
+  font-size: 15px;
+  font-weight: bold;
+  padding: 5px 20px;
+  text-decoration: none;
+  color: #0d0f0f;
+  background: #ECECEC;
+  transition: .1s;
+  cursor: pointer;
+  margin: auto;
+}
+
+.memo-btn:hover {
+  background: #636363;
+}
