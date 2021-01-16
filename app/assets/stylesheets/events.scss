@@ -4,50 +4,35 @@
 // Place all the styles related to the events controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.add-event {
-  text-decoration: none;
-}
 
 
 
-// ここから
 .wrapper {
   display: flex;
 }
 
 .side-bar {
-  background-color: #253141;
+  background-color: #2F3E51;
   width:150px;
-  height: 100vh;
 }
 
 .side-bar-header {
   height: 100px;
-  padding: 0 20px;
   background-color: #253141;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.header-name a{
-  font-size: 16px;
+.header-name {
+  font-size: 20px;
   color: #FAFAFA;
-  text-decoration: none;
+  margin: auto;
+  font-weight: bold;
 }
 
-// .create-room a {
-//   font-size: 10px;
-//   border: 1px solid lightblue;
-//   padding: 14px;
-//   color: deepskyblue;
-//   text-decoration: none;
-// }
-
-
 .others {
-  background-color: #2F3E51;
-  height: calc(100vh - 100px);
+  
   padding: 0 20px;
   overflow: scroll;
 }
@@ -72,12 +57,17 @@
   padding: 0 40px;
   display: flex;
   justify-content: space-between;
+  border-bottom: solid 1px rgb(57, 57, 65);
 }
 
-.header-title {
-  color: #333;
-  font-size: 24px;
-  margin-top: 36px;
+.add-event {
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.left-header {
+  margin: auto 0;
 }
 
 .header-button {
@@ -87,8 +77,8 @@
 .header-button a {
   text-decoration: none;
   border-radius:50% ;
-  background-color: rgb(245, 215, 232);
-  color: black;
+  background: #dfefff;
+  color: rgb(57, 57, 65);
   font-size: 20px;
   padding: 25px;
 }
@@ -103,7 +93,9 @@
 
 .calendar-header {
   // height: 40px;
-  padding: 10px 40px;
+  padding: 10px 10px;
   display: flex;
   justify-content: space-between;
 }
+
+// 編集画面
