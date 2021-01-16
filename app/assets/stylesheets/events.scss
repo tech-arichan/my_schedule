@@ -6,7 +6,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-
+// TOP
 .wrapper {
   display: flex;
 }
@@ -51,7 +51,6 @@
   width: calc(100vw - 150px);
 }
 
-
 .main-header {
   height: 100px;
   padding: 0 40px;
@@ -83,8 +82,6 @@
   padding: 25px;
 }
 
-
-
 .tbd {
   background-color: #DDDDDD;
   height: 90px;
@@ -96,8 +93,9 @@
   display: flex;
   justify-content: space-between;
 }
+// TOP //
 
-// 編集画面
+// 詳細画面
 
 .show-main {
   background: rgb(226, 226, 231);
@@ -128,4 +126,42 @@
 
 .show-footer p a {
   text-decoration: none;
+  cursor: pointer;
 }
+
+.TOPbtn {
+  margin-right: 20px;
+}
+
+// 詳細画面 //
+
+.edit-title {
+  font-size: 20px;
+  border-bottom:3px solid #ccc;
+  text-align:left;
+  padding:10px 20px;
+}
+
+.edit-form {
+  width: 50%;
+  margin: 10% auto;
+  min-width: 9rem;
+}
+
+
+.edit-submit {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0 0 10px;
+  padding: 5px 20px;
+  text-decoration: none;
+  color: #0d0f0f;
+  background: #ECECEC;
+  transition: .1s;
+  cursor: pointer;
+}
+
+.edit-submit:hover {
+  background: #636363;
+}
+
