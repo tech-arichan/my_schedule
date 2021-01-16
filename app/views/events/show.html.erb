@@ -1,19 +1,24 @@
-<div class="">
-  <div class="">
-    <ul class="">
-      <li> タイトル:<%= @event.title %> </li>
-      <li> 内容:<%= @event.content %> </li>
-      <li> 投稿日時:<%= @event.start_time %> </li>
-    </ul>
+<div class="show-main">
+
+  <h2 class="show-title">[タイトル] <%= @event.title %></h2>
+
+  <h2 class="show-title"> [内容] <%= @event.content %> </h2>
+
+  <h2 class="show-title"> [日時] <%= @event.start_time.strftime("%Y/%m/%d %H:%M") %> </h2>
+
+
+  <div class="show-footer">
+    <div class="footer-ed">
+      <p>
+        <%= link_to '編集', edit_event_path(@event.id), method: :get %>
+      </p>
+      <p>
+        <%= link_to '削除', event_path(@event.id), method: :delete %>
+      </p>
+    </div>
+    <p class="TOPbtn">
+      <%= link_to 'トップへ戻る', root_path %>
+    </p>
   </div>
   
-  <ul class="">
-    <li>
-      <%= link_to '編集', edit_event_path(@event.id), method: :get %>
-    </li>
-    <li>
-      <%= link_to '削除', event_path(@event.id), method: :delete %>
-    </li>
-  </ul>
-    <%= link_to 'トップへ戻る', root_path %>
 </div>

@@ -1,12 +1,20 @@
-<h1>メモ登録</h1>
-<%= form_with model: @memo, local: true do |f| %>
-  <div class="">
-    <%= f.text_field :memo %>
-    <%= f.submit "入力" %>
+<div class="show-main">
+ 
+  <div class="memo-header">
+    <div class="memo-head-right">
+      <h1>メモ登録</h1>
+      <h2><%= link_to 'メモ一覧', memos_path %></h2>
+    </div>
+    <div class="memo-head-left">
+      <h2><%= link_to 'トップへ戻る', root_path %></h2>
+    </div>
   </div>
-<% end %>
------------------
-<div>
-<%= link_to 'トップへ戻る', root_path %>
-<%= link_to 'メモ一覧', memos_path %>
+
+  <%= form_with model: @memo, local: true do |form| %>
+  <div class="memo-form">
+    <p><%= form.text_area :memo %></p>
+    <p><%= form.submit "入力", class: "memo-btn"%></p>
+  </div>
+  <% end %>
+
 </div>

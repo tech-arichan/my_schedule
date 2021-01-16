@@ -3,7 +3,7 @@
   <div class="side-bar">
     <div class="side-bar-header">
       <div class="header-name">
-        <%= link_to 'My Calendar', "/" %>
+        MyCalendar
       </div>
     </div>
 
@@ -29,9 +29,7 @@
   <div class="main">
     <div class="main-header">
       <div class="left-header">
-        <div class="header-title">
           <%= link_to 'イベント追加', new_event_path, class: "add-event"%>
-        </div>
       </div>
       <div class="right-header">
         <div class="header-button">
@@ -41,17 +39,18 @@
       </div>
     </div>
 
+    <div class="main-calendar">
+      <%= month_calendar events: @events do |date, events| %>
+        <%= date.day %>
 
-    <%= month_calendar events: @events do |date, events| %>
-      <%= date.day %>
+        <% events.each do |event| %>
+        <div>
+          <%= link_to "#{event.title}", event_path(event.id), method: :get  %>
+        </div>
 
-      <% events.each do |event| %>
-      <div>
-        <%= link_to "#{event.title}", event_path(event.id), method: :get  %>
-      </div>
-
+        <% end %>
       <% end %>
-    <% end %>
+    </div>
 
     <div class="tbd">
       <ul class="">

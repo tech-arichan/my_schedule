@@ -4,50 +4,35 @@
 // Place all the styles related to the events controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-.add-event {
-  text-decoration: none;
-}
 
 
-
-// ここから
+// TOP
 .wrapper {
   display: flex;
 }
 
 .side-bar {
-  background-color: #253141;
+  background-color: #2F3E51;
   width:150px;
-  height: 100vh;
 }
 
 .side-bar-header {
   height: 100px;
-  padding: 0 20px;
   background-color: #253141;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.header-name a{
-  font-size: 16px;
+.header-name {
+  font-size: 20px;
   color: #FAFAFA;
-  text-decoration: none;
+  margin: auto;
+  font-weight: bold;
 }
 
-// .create-room a {
-//   font-size: 10px;
-//   border: 1px solid lightblue;
-//   padding: 14px;
-//   color: deepskyblue;
-//   text-decoration: none;
-// }
-
-
 .others {
-  background-color: #2F3E51;
-  height: calc(100vh - 100px);
+  
   padding: 0 20px;
   overflow: scroll;
 }
@@ -66,18 +51,22 @@
   width: calc(100vw - 150px);
 }
 
-
 .main-header {
   height: 100px;
   padding: 0 40px;
   display: flex;
   justify-content: space-between;
+  border-bottom: solid 1px rgb(57, 57, 65);
 }
 
-.header-title {
-  color: #333;
-  font-size: 24px;
-  margin-top: 36px;
+.add-event {
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.left-header {
+  margin: auto 0;
 }
 
 .header-button {
@@ -87,13 +76,11 @@
 .header-button a {
   text-decoration: none;
   border-radius:50% ;
-  background-color: rgb(245, 215, 232);
-  color: black;
+  background: #dfefff;
+  color: rgb(57, 57, 65);
   font-size: 20px;
   padding: 25px;
 }
-
-
 
 .tbd {
   background-color: #DDDDDD;
@@ -102,8 +89,79 @@
 }
 
 .calendar-header {
-  // height: 40px;
-  padding: 10px 40px;
+  padding: 10px 10px;
   display: flex;
   justify-content: space-between;
 }
+// TOP //
+
+// 詳細画面
+
+.show-main {
+  background: rgb(226, 226, 231);
+  height: 100vh;
+}
+
+.show-title {
+  font-size: 20px;
+  border-bottom:3px solid #ccc;
+  text-align:left;
+  padding:10px 20px;
+
+}
+
+.show-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 20px;
+}
+
+.footer-ed {
+  display: flex;
+}
+
+.footer-ed p {
+  padding-left: 20px;
+}
+
+.show-footer p a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.TOPbtn {
+  margin-right: 20px;
+}
+
+// 詳細画面 //
+
+.edit-title {
+  font-size: 20px;
+  border-bottom:3px solid #ccc;
+  text-align:left;
+  padding:10px 20px;
+}
+
+.edit-form {
+  width: 50%;
+  margin: 10% auto;
+  min-width: 9rem;
+}
+
+
+.edit-submit {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0 0 10px;
+  padding: 5px 20px;
+  text-decoration: none;
+  color: #0d0f0f;
+  background: #ECECEC;
+  transition: .1s;
+  cursor: pointer;
+}
+
+.edit-submit:hover {
+  background: #636363;
+}
+

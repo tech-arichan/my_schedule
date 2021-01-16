@@ -1,28 +1,28 @@
-<div class="">
-  <div class="">
+<div class="show-main">
 
-    <h1>イベント編集</h1>
-    <%= form_with(model: @event, url: event_path, local: true) do |form| %>
-      
-      <div class="title">
-        <%= form.label :title %>
-        <%= form.text_field :title %>
-      </div>
+  <h2 class="edit-title">イベント編集</h2>
+  
+  <%= form_with(model: @event, url: event_path, local: true) do |form| %>
+    
+    <div class="show-title">
+      <%= form.label :タイトル： %>
+      <%= form.text_field :title %>
+    </div>
 
-        <div class="time">
-        <%= form.label :start_time %>
-        <%= form.datetime_select :start_time %>
-      </div>
+    <div class="show-title">
+      <%= form.label :内容： %>
+      <%= form.text_field :content %>
+    </div>
 
-      <div class="content">
-        <%= form.label :content %>
-        <%= form.text_field :content %>
-      </div>
+    <div class="show-title">
+      <%= form.label :日時： %>
+      <%= form.datetime_select :start_time %>
+    </div>
 
-      <div class="submit">
-        <%= form.submit %>
-      </div>
 
-    <% end %>
-  </div>
+    <div class="edit-btn">
+      <%= form.submit "編集", class: "edit-submit"%>
+    </div>
+
+  <% end %>
 </div>
