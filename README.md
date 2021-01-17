@@ -9,8 +9,10 @@
 | password | string | null: false |
 
 ### Association
-
 - has_many :events
+- has_many :memos
+- has_many :tasks
+- has_many :documents
 
 
 ## Events テーブル
@@ -31,9 +33,11 @@
 | Column     | Type       | Options              |
 | ---------- | ---------- | -------------------- |
 | memo       | string     | null: false          |
+| user_id    | references | null: false, foreign_key: true |
 
 ### Association
-- 
+- belongs_to :user
+
 
 ## Tasks テーブル
 
@@ -42,9 +46,10 @@
 | title      | string     | null: false          |
 | deadline   | datetime   | null: false          |
 | detail     | text       |                      |
+| user_id    | references | null: false, foreign_key: true |
 
 ### Association
-- 
+- belongs_to :user
 
 
 ## Documents テーブル
@@ -53,7 +58,8 @@
 | ---------- | ---------- | -------------------- |
 | title      | string     | null: false          |
 | detail     | text       |                      |
+| user_id    | references | null: false, foreign_key: true |
 <!-- | image      | datetime   | null: false          | -->
 
 ### Association
-- 
+- belongs_to :user
