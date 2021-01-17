@@ -1,6 +1,6 @@
 # テーブル設計
 
-## users テーブル
+## Users テーブル
 
 | Column   | Type   | Options     |
 | -------- | ------ | ----------- |
@@ -11,10 +11,9 @@
 ### Association
 
 - has_many :events
-- has_many :memos
 
 
-## plans テーブル
+## Events テーブル
 
 | Column     | Type       | Options              |
 | ---------- | ---------- | -------------------- |
@@ -27,15 +26,34 @@
 
 - belongs_to :user
 
-## memos テーブル
+## Memos テーブル
 
 | Column     | Type       | Options              |
 | ---------- | ---------- | -------------------- |
 | memo       | string     | null: false          |
-| user_id    | references | null: false, foreign_key: true |
 
 ### Association
+- 
 
-- belongs_to :user
+## Tasks テーブル
+
+| Column     | Type       | Options              |
+| ---------- | ---------- | -------------------- |
+| title      | string     | null: false          |
+| deadline   | datetime   | null: false          |
+| detail     | text       |                      |
+
+### Association
+- 
 
 
+## Documents テーブル
+
+| Column     | Type       | Options              |
+| ---------- | ---------- | -------------------- |
+| title      | string     | null: false          |
+| detail     | text       |                      |
+<!-- | image      | datetime   | null: false          | -->
+
+### Association
+- 
