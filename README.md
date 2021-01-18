@@ -46,10 +46,12 @@
 | title      | string     | null: false          |
 | deadline   | datetime   | null: false          |
 | detail     | text       |                      |
+| priority_id | integer    | null: false              |
 | user_id    | references | null: false, foreign_key: true |
 
 ### Association
 - belongs_to :user
+- belongs_to_active_hash :priority_id
 
 
 ## Documents テーブル
