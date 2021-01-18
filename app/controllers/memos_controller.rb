@@ -22,7 +22,7 @@ class MemosController < ApplicationController
   private
 
   def memo_parameter
-    params.require(:memo).permit(:memo)
+    params.require(:memo).permit(:memo).merge(user_id: current_user.id )
   end
 
 end
