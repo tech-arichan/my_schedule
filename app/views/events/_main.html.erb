@@ -1,0 +1,33 @@
+<div class="main-header">
+  <div class="left-header">
+      <%= link_to 'イベント追加', new_event_path, class: "add-event"%>
+  </div>
+  <div class="right-header">
+    <div class="header-button">
+    <%= link_to current_user.name, edit_user_path(current_user) %>
+
+    </div>
+  </div>
+</div>
+
+<div class="main-calendar">
+  <%= month_calendar events: @events do |date, events| %>
+    <%= date.day %>
+
+    <% events.each do |event| %>
+    <div>
+      <%= link_to "#{event.title}", event_path(event.id), method: :get  %>
+    </div>
+
+    <% end %>
+  <% end %>
+</div>
+
+
+<div class="main-footer">
+  <div class="">
+    <div class="">
+      <%# 未定 %>
+    </div>
+  </div>
+</div>

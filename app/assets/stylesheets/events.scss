@@ -6,19 +6,19 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-// TOP
 .wrapper {
   display: flex;
 }
 
+//サイドバー
 .side-bar {
-  background-color: #2F3E51;
+  background-color: #253141;
   width:150px;
 }
 
 .side-bar-header {
   height: 100px;
-  background-color: #253141;
+  background-color: #2F3E51;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,26 +31,28 @@
   font-weight: bold;
 }
 
-.others {
-  
+.side-main {
   padding: 0 20px;
-  overflow: scroll;
-}
+  // overflow: scroll;
 
-.other {
-  padding: 20px 0 40px;
+}
+.others {
+  padding: 30px 0 30px;
 }
 
 .other-name a {
   text-decoration: none;
   color: white;
 }
+//---------------//
 
+//メインカレンダー
 .main {
   background-color: #FFFFFF;
   width: calc(100vw - 150px);
 }
 
+//メイン上部
 .main-header {
   height: 100px;
   padding: 0 40px;
@@ -81,19 +83,27 @@
   font-size: 20px;
   padding: 25px;
 }
+//---------------//
 
-.tbd {
-  background-color: #DDDDDD;
-  height: 90px;
-  padding: 20px 40px;
-}
-
+//メイン中部
 .calendar-header {
+  background-color: #FAFAFA;
   padding: 10px 10px;
   display: flex;
   justify-content: space-between;
 }
-// TOP //
+//---------------//
+
+//--メイン下部--//
+.main-footer {
+  background-color: #DDDDDD;
+  height: 90px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+//---------------//
+
 
 // 詳細画面
 
@@ -133,7 +143,7 @@
   margin-right: 20px;
 }
 
-// 詳細画面 //
+//---------------//
 
 .edit-title {
   font-size: 20px;
