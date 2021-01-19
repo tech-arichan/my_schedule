@@ -16,7 +16,7 @@
 
     <% events.each do |event| %>
     <div>
-      <%= link_to "#{event.title}", event_path(event.id), method: :get  %>
+      <%= event.user.name %> : <%= link_to "#{event.title}", event_path(event.id), method: :get  %>
     </div>
 
     <% end %>
