@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_01_19_040843) do
+ActiveRecord::Schema.define(version: 2021_01_19_072942) do
 
   create_table "events", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "title"
@@ -30,6 +30,17 @@ ActiveRecord::Schema.define(version: 2021_01_19_040843) do
     t.index ["user_id"], name: "index_memos_on_user_id"
   end
 
+  create_table "tasks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "title"
+    t.datetime "deadline"
+    t.text "detail"
+    t.integer "priority", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_tasks_on_user_id"
+  end
+
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
     t.string "email", default: "", null: false
@@ -45,4 +56,5 @@ ActiveRecord::Schema.define(version: 2021_01_19_040843) do
 
   add_foreign_key "events", "users"
   add_foreign_key "memos", "users"
+  add_foreign_key "tasks", "users"
 end
