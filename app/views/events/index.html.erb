@@ -1,61 +1,10 @@
 <div class="wrapper">
   
   <div class="side-bar">
-    <div class="side-bar-header">
-      <div class="header-name">
-        MyCalendar
-      </div>
-    </div>
-
-    <div class="others">
-      <div class="other">
-        <div class="other-name">
-          <a href="#">タスク</a>
-        </div>
-      </div>
-      <div class="other">
-        <div class="other-name">
-        <%= link_to 'メモ', memos_path %>
-        </div>
-      </div>
-      <div class="other">
-        <div class="other-name">
-          <a href="#">資料庫</a>
-        </div>
-      </div>
-    </div>
+    <%= render "side_bar" %>
   </div>
 
   <div class="main">
-    <div class="main-header">
-      <div class="left-header">
-          <%= link_to 'イベント追加', new_event_path, class: "add-event"%>
-      </div>
-      <div class="right-header">
-        <div class="header-button">
-        <%= link_to current_user.name, edit_user_path(current_user) %>
-
-        </div>
-      </div>
-    </div>
-
-    <div class="main-calendar">
-      <%= month_calendar events: @events do |date, events| %>
-        <%= date.day %>
-
-        <% events.each do |event| %>
-        <div>
-          <%= link_to "#{event.title}", event_path(event.id), method: :get  %>
-        </div>
-
-        <% end %>
-      <% end %>
-    </div>
-
-    <div class="tbd">
-      <ul class="">
-
-      </ul>
-    </div>
+    <%= render "main" %>
   </div>
 </div>
