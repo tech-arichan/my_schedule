@@ -7,8 +7,8 @@
 .memo-header {
   display: flex;
   justify-content: space-between;
-  border-bottom:3px solid #ccc;
-  padding: 10px;
+  padding: 5px 20px;
+  border-bottom:2px solid gray;
 }
 
 .memo-head-right {
@@ -16,8 +16,9 @@
   align-items: center;
 }
 
-.memo-head-right h1 {
-  font-size: 20px;
+.memo-title {
+  font-size: 30px;
+  margin-right: 20px;
 }
 
 .memo-head-left {
@@ -25,48 +26,22 @@
   align-items: center;
 }
 
-.memo-head-right h2 {
-  padding-left: 20px;
+.memo-main {
+  margin: 30px;
+  padding: 0 20px;
 }
 
 .memo-table {
-  font-size: 15px;
-  border-bottom:1px solid #ccc;
-  text-align:left;
-  padding:10px 10px;
-}
-
-.memo-content {
   display: flex;
   justify-content: space-between;
+  border-bottom:2px solid #ccc;
+  margin: 5px 0;
 }
+// .memo-content {} メモの内容
+// .task-ed-btn {} メモ削除
 
-.memo-content h3 {
-  margin-right: 20px;
-}
+//------------//
 
-a {
-  text-decoration: none;
-}
-
-// メモ トップ //
-
-.memo-form {
-  margin: 5px 0 5px 10px;
-}
-
-.memo-btn {
-  font-size: 15px;
-  font-weight: bold;
-  padding: 5px 20px;
-  text-decoration: none;
-  color: #0d0f0f;
-  background: #ECECEC;
-  transition: .1s;
-  cursor: pointer;
-  margin: auto;
-}
-
-.memo-btn:hover {
-  background: #636363;
+.edit-btn {
+  padding: 0 0 0 10px;
 }

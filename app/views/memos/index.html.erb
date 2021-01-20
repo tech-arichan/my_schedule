@@ -1,25 +1,27 @@
-<div class="show-main">
+<div class="main-background">
   <div class="memo-header">
-    
     <div class="memo-head-right">
-      <h1>メモ一覧</h1>
+      <h1 class="memo-title">メモ一覧</h1>
       <h2><%= link_to '新規メモ', new_memo_path %></h2>
     </div>
-
     <div class="memo-head-left">
       <h2><%= link_to 'トップへ戻る', root_path %></h2>
     </div>
-  
   </div>
+
+  <div class="memo-main">
   
-  <% @memos.reverse_each do |memo| %>
-
-    <div class="memo-table">
-      <div class="memo-content">
-      <h2><%= memo.memo %></h2>
-      <h3><%= link_to '削除', memo_path(memo.id), method: :delete %></h3>
+    <% @memos.reverse_each do |memo| %>
+      <div class="memo-table">
+        <div class="memo-content">
+          <p><%= memo.memo %></p>
+        </div>
+        <div class="task-ed-btn">
+          <p>
+            <%= link_to '削除', memo_path(memo.id), method: :delete %>
+          </p>
+        </div>
       </div>
-    </div>
-  <% end %>
-
+    <% end %>
+  </div>
 </div>
