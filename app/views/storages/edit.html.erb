@@ -16,13 +16,13 @@
         <%= form.text_field :title %>
       </div>
       <div class="show-title">
+        <%= form.label :資料： %>
+        <%= form.file_field :image, id:"item-image" %>
+      </div>
+      <div class="show-title">
         <%= form.label :詳細：, class:"detail-font" %>
         <%= form.text_area :detail %>
       </div>
-
-      <%# <div class="edit-btn">
-        <%= form.submit "ファイルを選択", class: "edit-submit">
-      </div> %>
       <div class="edit-btn">
         <%= form.submit "編集", class: "edit-submit"%>
       </div>

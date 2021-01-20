@@ -41,7 +41,7 @@ class StoragesController < ApplicationController
   private
 
   def storage_parameter
-    params.require(:storage).permit(:title, :detail).merge(user_id: current_user.id )
+    params.require(:storage).permit(:title, :detail, :image).merge(user_id: current_user.id )
   end
 
   def set_storage

@@ -9,6 +9,9 @@
     </div>
 </div>
   ＜<%= @storage.title %>＞
+  
+  <%= image_tag @storage.image.variant(resize: '150x150') if @storage.image.attached? %>
+
   ＜詳細＞<%= @storage.detail %>
     <%= link_to '編集', edit_storage_path(@storage.id), method: :get %>
     <%= link_to '削除', storage_path(@storage.id), method: :delete %>
