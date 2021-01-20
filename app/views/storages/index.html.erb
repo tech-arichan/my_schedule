@@ -7,14 +7,19 @@
     <div class="task-head-left">
       <h2><%= link_to 'トップへ戻る', root_path %></h2>
     </div>
-</div>
+  </div>
 
-  <% @storages.reverse_each do |storage| %>
-    <%= link_to "#{storage.title}", storage_path(storage.id), method: :get  %>
-    ＜詳細＞<%= storage.detail %>
-    <%= link_to '編集', edit_storage_path(storage.id), method: :get %>
-    <%= link_to '削除', storage_path(storage.id), method: :delete %>
-  <% end %>
+  <div class="storage-main">
+    <% @storages.reverse_each do |storage| %>
+      <div class="storage-table">
+        <div class="storage-content">
+        <p>  <%= link_to "#{storage.title}", storage_path(storage.id), method: :get  %>  </p>
+        </div>
 
-
+        <div class="storage-ed-btn">
+          <p>  <%= link_to '倉庫削除', storage_path(storage.id), method: :delete %>  </p>
+        </div>
+      </div>
+    <% end %>
+  </div>
 </div>

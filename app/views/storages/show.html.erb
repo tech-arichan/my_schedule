@@ -8,11 +8,20 @@
       <h2><%= link_to 'トップへ戻る', root_path %></h2>
     </div>
 </div>
-  ＜<%= @storage.title %>＞
+  <div>
+    ＜<%= @storage.title %>＞
+  </div>
   
-  <%= image_tag @storage.image.variant(resize: '150x150') if @storage.image.attached? %>
+  <div>
+    <%= image_tag @storage.image.variant(resize: '150x150') if @storage.image.attached? %>
+  </div>
 
-  ＜詳細＞<%= @storage.detail %>
-    <%= link_to '編集', edit_storage_path(@storage.id), method: :get %>
+  <div>
+    <%= @storage.detail %>
+  </div>
+  
+  <div>
+    <%= link_to '画像変更', edit_storage_path(@storage.id), method: :get %>
     <%= link_to '削除', storage_path(@storage.id), method: :delete %>
+  </div>
 </div>
