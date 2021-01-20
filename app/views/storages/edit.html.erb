@@ -1,0 +1,31 @@
+<div class="main-background">
+  <div class="task-header">
+    <div class="task-head-right">
+      <h1 class="task-title">資料登録</h1>
+      <h2><%= link_to '倉庫一覧', storages_path %></h2>
+    </div>
+    <div class="task-head-left">
+      <h2><%= link_to 'トップへ戻る', root_path %></h2>
+    </div>
+  </div>
+
+  <%= form_with model: @storage, local: true do |form| %>
+    <div class="">
+      <div class="show-title">
+        <%= form.label :倉庫名： %>
+        <%= form.text_field :title %>
+      </div>
+      <div class="show-title">
+        <%= form.label :詳細：, class:"detail-font" %>
+        <%= form.text_area :detail %>
+      </div>
+
+      <%# <div class="edit-btn">
+        <%= form.submit "ファイルを選択", class: "edit-submit">
+      </div> %>
+      <div class="edit-btn">
+        <%= form.submit "編集", class: "edit-submit"%>
+      </div>
+    </div>
+  <% end %>
+</div>

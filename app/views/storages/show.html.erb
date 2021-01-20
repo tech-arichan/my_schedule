@@ -1,0 +1,15 @@
+<div class="main-background">
+  <div class="task-header">
+    <div class="task-head-right">
+      <h1 class="task-title">資料一覧</h1>
+      <h2><%= link_to '倉庫一覧', storages_path %></h2>
+    </div>
+    <div class="task-head-left">
+      <h2><%= link_to 'トップへ戻る', root_path %></h2>
+    </div>
+</div>
+  ＜<%= @storage.title %>＞
+  ＜詳細＞<%= @storage.detail %>
+    <%= link_to '編集', edit_storage_path(@storage.id), method: :get %>
+    <%= link_to '削除', storage_path(@storage.id), method: :delete %>
+</div>
