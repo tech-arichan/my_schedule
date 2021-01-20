@@ -24,7 +24,7 @@
       </div>
       <div class="show-title">
         <%= form.label :優先順位： %>
-        <%= form.text_field :priority, placeholder: "低、中、高　など" %>
+        <%= form.collection_select(:priority_id, Priority.all, :id, :name, {}) %>
       </div>
       <div class="edit-btn">
         <%= form.submit "登録", class: "edit-submit"%>
