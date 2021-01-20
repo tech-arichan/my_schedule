@@ -1,8 +1,7 @@
-<div class="show-main">
- 
+<div class="main-background">
   <div class="memo-header">
     <div class="memo-head-right">
-      <h1>メモ登録</h1>
+      <h1 class="memo-title">メモ登録</h1>
       <h2><%= link_to 'メモ一覧', memos_path %></h2>
     </div>
     <div class="memo-head-left">
@@ -11,10 +10,11 @@
   </div>
 
   <%= form_with model: @memo, local: true do |form| %>
-  <div class="memo-form">
-    <p><%= form.text_area :memo %></p>
-    <p><%= form.submit "入力", class: "memo-btn"%></p>
-  </div>
+    <div class="show-title">
+      <%= form.text_area :memo %>
+    </div>
+    <div class="edit-btn">
+      <%= form.submit "登録", class: "edit-submit"%>
+    </div>
   <% end %>
-
 </div>
