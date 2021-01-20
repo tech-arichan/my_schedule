@@ -1,0 +1,92 @@
+// Place all the styles related to the tasks controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.main-background {
+  background: rgb(226, 226, 231);
+  height: 100vh;
+}
+
+
+.task-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 20px;
+  border-bottom:2px solid gray;
+}
+
+.task-head-right {
+  display: flex;
+  align-items: center;
+}
+
+.task-title {
+  font-size: 30px;
+  margin-right: 20px;
+}
+
+.task-head-left {
+  display: flex;
+  align-items: center;
+}
+
+.task-main {
+  margin: 15px;
+}
+.table-title-font-size {
+  font-weight: bold;
+  font-size: large;
+}
+.table-title>ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border-bottom:2px solid #ccc;
+}
+
+.table-title>ul>li {
+  width: 20%;
+  position: relative;
+}
+
+.table-title>ul>li:not(:first-child)::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 0;
+  height: 80%;
+}
+
+.table-title>ul>li>p {
+  display: block;
+  padding: 0.5em 1em;
+  color: black;
+  text-align: center;
+}
+
+.task-ed-btn {
+  display: flex;
+  justify-content: space-around;
+}
+
+.task-edit {
+  width: 100px;
+  display: flex;
+}
+.task-edit p {
+  margin-left: 10px;
+}
+
+.detail-font {
+  vertical-align: top;
+}
+a {
+  text-decoration: none;
+}
+
+

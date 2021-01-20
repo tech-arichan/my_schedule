@@ -1,0 +1,34 @@
+<div class="show-main">
+  <div class="task-header">
+    <div class="task-head-right">
+      <h1 class="task-title">タスク登録</h1>
+      <h2><%= link_to 'タスク一覧', tasks_path %></h2>
+    </div>
+    <div class="task-head-left">
+      <h2><%= link_to 'トップへ戻る', root_path %></h2>
+    </div>
+  </div>
+  <%= form_with(model: @task, url: task_path, local: true) do |form| %>
+    <div class="">
+      <div class="show-title">
+        <%= form.label :タイトル： %>
+        <%= form.text_field :title %>
+      </div>
+      <div class="show-title">
+        <%= form.label :詳細：, class:"detail-font" %>
+        <%= form.text_area :detail %>
+      </div>
+      <div class="show-title">
+        <%= form.label :締切日時：%>
+        <%= form.datetime_select :deadline %>
+      </div>
+      <div class="show-title">
+        <%= form.label :優先順位： %>
+        <%= form.text_field :priority, placeholder: "低、中、高　など" %>
+      </div>
+      <div class="edit-btn">
+        <%= form.submit "編集", class: "edit-submit"%>
+      </div>
+    </div>
+  <% end %>
+</div>

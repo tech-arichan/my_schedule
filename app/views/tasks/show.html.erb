@@ -1,0 +1,27 @@
+<div class="main-background">
+  <div class="task-header">
+    <div class="task-head-right">
+      <h1 class="task-title">タスク詳細</h1>
+      <h2><%= link_to 'タスク一覧', tasks_path %></h2>
+    </div>
+    <div class="task-head-left">
+      <h2><%= link_to 'トップへ戻る', root_path %></h2>
+    </div>
+  </div>
+  <div class="task-main">
+    <h2 class="show-title">[タイトル] <%= @task.title %></h2>
+    <h2 class="show-title"> [詳細] <%= @task.detail %> </h2>
+    <h2 class="show-title"> [締切日] <%= @task.deadline.strftime("%Y/%m/%d %H:%M") %> </h2>
+    <h2 class="show-title"> [タスク登録日] <%= @task.created_at.strftime("%Y/%m/%d") %> </h2>
+    <div class="show-footer">
+      <div class="footer-ed">
+        <p>
+          <%= link_to '編集', edit_task_path(@task.id), method: :get %>
+        </p>
+        <p>
+          <%= link_to '削除', task_path(@task.id), method: :delete %>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

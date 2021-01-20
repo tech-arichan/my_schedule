@@ -1,0 +1,40 @@
+<div class="main-background">
+  <div class="task-header">
+    <div class="task-head-right">
+      <h1 class="task-title">タスク一覧</h1>
+      <h2><%= link_to '新規登録', new_task_path %></h2>
+    </div>
+    <div class="task-head-left">
+      <h2><%= link_to 'トップへ戻る', root_path %></h2>
+    </div>
+  </div>
+  <div class="task-main">
+    <div class="table-title">
+      <ul class="table-title-font-size">
+        <li><p>タイトル</p></li>
+        <li><p>登録日</p></li>
+        <li><p>締切日</p></li>
+        <li><p>優先順位</p></li>
+        <li><p></p></li>
+      </ul>
+    </div>
+    <% @tasks.reverse_each do |task| %>
+      <div class="table-title">
+        <ul>
+          <li><p><%= link_to "#{task.title}", task_path(task.id), method: :get  %></p></li>
+          <li><p><%= task.created_at.strftime("%Y/%m/%d") %></p></li>
+          <li><p><%= task.deadline.strftime("%Y/%m/%d") %></p></li>
+          <li><p><%= task.priority %></p></li>
+          <li class="task-ed-btn">
+            <p>
+              <%= link_to '編集', edit_task_path(task.id), method: :get %>
+            </p>
+            <p>
+              <%= link_to '削除', task_path(task.id), method: :delete %>
+            </p>
+          </li>
+        </ul>
+      </div>
+    <% end %>
+  </div>
+</div>
