@@ -11,7 +11,8 @@
 .task-header {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  padding: 5px 20px;
+  border-bottom:2px solid gray;
 }
 
 .task-head-right {
@@ -19,7 +20,7 @@
   align-items: center;
 }
 
-.task {
+.task-title {
   font-size: 30px;
   margin-right: 20px;
 }
@@ -29,18 +30,48 @@
   align-items: center;
 }
 
-.table-title {
+.task-main {
+  margin: 15px;
+}
+.table-title-font-size {
+  font-weight: bold;
+  font-size: large;
+}
+.table-title>ul {
   display: flex;
-  justify-content: space-between;
-  border-bottom:5px solid #ccc;
-  padding:10px 10px;
+  align-items: center;
+  justify-content: space-around;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border-bottom:2px solid #ccc;
 }
 
-.table-content {
+.table-title>ul>li {
+  width: 20%;
+  position: relative;
+}
+
+.table-title>ul>li:not(:first-child)::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 0;
+  height: 80%;
+}
+
+.table-title>ul>li>p {
+  display: block;
+  padding: 0.5em 1em;
+  color: black;
+  text-align: center;
+}
+
+.task-ed-btn {
   display: flex;
-  justify-content: space-between;
-  border-bottom:2px solid #ccc;
-  padding:10px 10px;
+  justify-content: space-around;
 }
 
 .task-edit {
@@ -51,7 +82,9 @@
   margin-left: 10px;
 }
 
-
+.detail-font {
+  vertical-align: top;
+}
 a {
   text-decoration: none;
 }

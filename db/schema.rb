@@ -31,14 +31,12 @@ ActiveRecord::Schema.define(version: 2021_01_19_072942) do
   end
 
   create_table "tasks", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "title"
-    t.datetime "deadline"
+    t.string "title", null: false
+    t.datetime "deadline", null: false
     t.text "detail"
-    t.integer "priority", null: false
-    t.bigint "user_id", null: false
+    t.string "priority", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["user_id"], name: "index_tasks_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -56,5 +54,4 @@ ActiveRecord::Schema.define(version: 2021_01_19_072942) do
 
   add_foreign_key "events", "users"
   add_foreign_key "memos", "users"
-  add_foreign_key "tasks", "users"
 end
