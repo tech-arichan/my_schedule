@@ -34,7 +34,7 @@ ActiveRecord::Schema.define(version: 2021_01_19_072942) do
     t.string "title", null: false
     t.datetime "deadline", null: false
     t.text "detail"
-    t.string "priority", null: false
+    t.integer "priority_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
