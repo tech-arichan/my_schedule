@@ -4,5 +4,6 @@ Rails.application.routes.draw do
   root to: 'events#index'
   resources :events
   resources :tasks
+  resources :storages
   resources :memos, only:[:index, :new, :create, :destroy]
 end

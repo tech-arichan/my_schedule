@@ -1,0 +1,29 @@
+<div class="main-background">
+  <div class="task-header">
+    <div class="task-head-right">
+      <h1 class="task-title">資料一覧</h1>
+      <h2><%= link_to '倉庫一覧', storages_path %></h2>
+    </div>
+    <div class="task-head-left">
+      <h2><%= link_to 'トップへ戻る', root_path %></h2>
+    </div>
+</div>
+  <div>
+    ＜<%= @storage.title %>＞
+  </div>
+  
+  <div>
+    <% @storage.images.each do |image| %>
+    <%= image_tag image.variant(resize: '150x150'), class: 'images' %>
+    <% end %>
+  </div>
+
+  <div>
+    <%= @storage.detail %>
+  </div>
+  
+  <div>
+    <%= link_to '画像変更', edit_storage_path(@storage.id), method: :get %>
+    <%= link_to '削除', storage_path(@storage.id), method: :delete %>
+  </div>
+</div>

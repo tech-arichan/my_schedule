@@ -1,0 +1,16 @@
+// Place all the styles related to the storages controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.storage-main {
+  margin: 30px;
+  padding: 0 20px;
+}
+
+.storage-table {
+  display: flex;
+  justify-content: space-around;
+  border-bottom:2px solid #ccc;
+  margin: 5px 0;
+}
+// .storage-content {} storageのtitle
+// .storage-ed-btn {} 削除

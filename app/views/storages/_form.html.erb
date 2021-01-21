@@ -1,0 +1,25 @@
+<%= form_with model: @storage, local: true do |form| %>
+  <div class="">
+    <div class="show-title">
+      <%= form.label :倉庫名： %>
+      <%= form.text_field :title %>
+    </div>
+    <div class="show-title">
+      <%= form.label :資料： %>
+      <%= form.file_field :images, name: 'storage[images][]', id: 'storage_image' %>
+    <div id="image-list"></div>
+    </div>
+    <div class="show-title">
+      <%= form.label :詳細：, class:"detail-font" %>
+      <%= form.text_area :detail %>
+    </div>
+    <div class="edit-btn">
+      <%= form.submit "送信", class: "edit-submit"%>
+    </div>
+
+  </div>
+<% end %>
+
+<% @storage.images.each do |image| %>
+  <%= image_tag image, class: 'images' %> 
+<% end %>
