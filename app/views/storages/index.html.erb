@@ -1,7 +1,7 @@
 <div class="main-background">
   <div class="task-header">
     <div class="task-head-right">
-      <h1 class="task-title">倉庫一覧</h1>
+      <h1 class="task-title">資料一覧</h1>
       <h2><%= link_to '資料登録',new_storage_path %></h2>
     </div>
     <div class="task-head-left">
@@ -12,12 +12,18 @@
   <div class="storage-main">
     <% @storages.reverse_each do |storage| %>
       <div class="storage-table">
-        <div class="storage-content">
-        <p>  <%= link_to "#{storage.title}", storage_path(storage.id), method: :get  %>  </p>
+        <div class="storage-title">
+        <p>  <%= link_to "＜#{storage.title}＞", storage_path(storage.id), method: :get  %>  </p>
         </div>
 
+        <div class="storage-image">
+        <% storage.images.each do |image| %>
+        <%= image_tag image.variant(resize: '150x150'), class: 'images' %>
+        <% end %>
+      </div>
+
         <div class="storage-ed-btn">
-          <p>  <%= link_to '倉庫削除', storage_path(storage.id), method: :delete %>  </p>
+          <p>  <%= link_to '削除', storage_path(storage.id), method: :delete %>  </p>
         </div>
       </div>
     <% end %>

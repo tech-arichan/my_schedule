@@ -21,5 +21,5 @@
 <% end %>
 
 <% @storage.images.each do |image| %>
-  <%= image_tag image, class: 'images' %> 
+  <%= image_tag image.variant(resize: '150x150'), class: 'images' %> 
 <% end %>

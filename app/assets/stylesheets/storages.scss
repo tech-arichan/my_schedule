@@ -8,9 +8,27 @@
 
 .storage-table {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   border-bottom:2px solid #ccc;
   margin: 5px 0;
+  padding: 10px;
+  width: 100wv;
 }
-// .storage-content {} storageのtitle
-// .storage-ed-btn {} 削除
+
+.storage-title {
+  width: 150px;
+  margin-right: 20px;
+}
+.storage-image {
+  width: calc(100vw - 100px - 70px);
+}
+.storage-ed-btn {
+  width: 70px;
+  margin-left: 20px;
+  position:relative;
+}
+.storage-ed-btn p {
+  bottom: 0;
+  right: 0;
+  position:absolute;
+}
