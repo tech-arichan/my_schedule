@@ -13,7 +13,9 @@
   </div>
   
   <div>
-    <%= image_tag @storage.image.variant(resize: '150x150') if @storage.image.attached? %>
+    <% @storage.images.each do |image| %>
+    <%= image_tag image.variant(resize: '150x150'), class: 'images' %>
+    <% end %>
   </div>
 
   <div>

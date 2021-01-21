@@ -1,10 +1,10 @@
 class Storage < ApplicationRecord
   belongs_to :user
-  has_one_attached :image
+  has_many_attached :images
 
   validates :title, presence: true, unless: :was_attached?
 
   def was_attached?
-    self.image.attached?
+    self.images.attached?
   end
 end

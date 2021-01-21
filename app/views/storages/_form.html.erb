@@ -6,9 +6,8 @@
     </div>
     <div class="show-title">
       <%= form.label :資料： %>
-      <%= form.file_field :image %>
+      <%= form.file_field :images, name: 'storage[images][]', id: 'storage_image' %>
     <div id="image-list"></div>
-    <%= image_tag @storage.image.variant(resize: '150x150'), id: 'image' if @storage.image.present? %> 
     </div>
     <div class="show-title">
       <%= form.label :詳細：, class:"detail-font" %>
@@ -19,4 +18,8 @@
     </div>
 
   </div>
+<% end %>
+
+<% @storage.images.each do |image| %>
+  <%= image_tag image, class: 'images' %> 
 <% end %>
