@@ -10,7 +10,7 @@ class StoragesController < ApplicationController
   end
 
   def create
-    storage = Storage.create(storage_parameter)
+    storage = Storage.new(storage_parameter)
     if storage.save
       redirect_to storages_path
     else
