@@ -5,6 +5,7 @@
   <h2 class="show-title"> [内容] <%= @event.content %> </h2>
 
   <h2 class="show-title"> [日時] <%= @event.start_time.strftime("%Y/%m/%d %H:%M") %> </h2>
+  <h2 class="show-title"> [予定登録者] <%= @event.user.name %> </h2>
 
   <div class="show-footer">
     <div class="footer-ed">
