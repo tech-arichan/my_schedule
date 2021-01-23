@@ -1,6 +1,15 @@
 <div class="show-main">
 
-  <h2 class="edit-title">イベント登録</h2>
+  <div class="task-header">
+    <div class="task-head-right">
+      <h1 class="task-title">イベント登録</h1>
+      <h2><%= link_to 'トップへ戻る', root_path %></h2>
+    </div>
+
+    <div class="task-head-left">
+    </div>
+
+  </div>
   
   <%= form_with model: @event, local: true do |form| %>
     
