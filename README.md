@@ -32,7 +32,7 @@
 
 | Column     | Type       | Options              |
 | ---------- | ---------- | -------------------- |
-| memo       | string     | null: false          |
+| memo       | text       | null: false          |
 | user_id    | references | null: false, foreign_key: true |
 
 ### Association
@@ -54,14 +54,13 @@
 - belongs_to_active_hash :priority_id
 
 
-## Documents テーブル
+## Storages テーブル
 
 | Column     | Type       | Options              |
 | ---------- | ---------- | -------------------- |
 | title      | string     | null: false          |
 | detail     | text       |                      |
 | user_id    | references | null: false, foreign_key: true |
-<!-- | image      | datetime   | null: false          | -->
 
 ### Association
 - belongs_to :user

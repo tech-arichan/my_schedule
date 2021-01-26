@@ -65,8 +65,10 @@ ActiveRecord::Schema.define(version: 2021_01_20_061255) do
     t.datetime "deadline", null: false
     t.text "detail"
     t.integer "priority_id", null: false
+    t.bigint "user_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_tasks_on_user_id"
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -86,4 +88,5 @@ ActiveRecord::Schema.define(version: 2021_01_20_061255) do
   add_foreign_key "events", "users"
   add_foreign_key "memos", "users"
   add_foreign_key "storages", "users"
+  add_foreign_key "tasks", "users"
 end

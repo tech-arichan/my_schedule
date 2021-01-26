@@ -10,9 +10,12 @@ class TasksController < ApplicationController
   end
 
   def create
-    Task.create(task_parameter)
-    redirect_to tasks_path
-
+    task = Task.new(task_parameter)
+    if task.save
+      redirect_to tasks_path
+    else
+      redirect_to new_task_path
+    end
   end
 
 
@@ -37,7 +40,7 @@ class TasksController < ApplicationController
   private
 
   def task_parameter
-    params.require(:task).permit(:title, :deadline, :detail, :priority_id)
+    params.require(:task).permit(:title, :deadline, :detail, :priority_id).merge(user_id: current_user.id)
   end
 
   def set_task
