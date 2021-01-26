@@ -12,12 +12,9 @@ RSpec.describe "イベント登録機能", type: :system do
       visit new_event_path
       expect(current_path).to eq new_event_path #確認
 
-      # fill_in 'event_title', with: ""
-      # fill_in 'event_content', with: ""
       expect {
         find('input[name="commit"]').click
       }.not_to change { Event.count }
-      click_on("イベント追加")
       expect(current_path).to eq new_event_path #確認
     end
   end
