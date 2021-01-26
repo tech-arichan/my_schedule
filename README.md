@@ -32,7 +32,7 @@
 
 | Column     | Type       | Options              |
 | ---------- | ---------- | -------------------- |
-| memo       | string     | null: false          |
+| memo       | text       | null: false          |
 | user_id    | references | null: false, foreign_key: true |
 
 ### Association
