@@ -10,7 +10,7 @@ class EventsController < ApplicationController
   end
 
   def create
-    event = Event.create(event_parameter)
+    event = Event.new(event_parameter)
     if event.save
       redirect_to root_path
     else
