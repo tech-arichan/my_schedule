@@ -26,17 +26,41 @@
   align-items: center;
 }
 
-.memo-main {
-  margin: 30px;
-  padding: 0 20px;
+.table-memo-font-size {
+  font-weight: bold;
+  font-size: large;
+}
+.table-memo>ul {
+  width: 97vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border-bottom:2px solid #ccc;
+}
+.table-memo>ul>li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  // float: left;
+  // width: 30%;
+  position: relative;
 }
 
-.memo-table {
-  display: flex;
-  justify-content: space-between;
-  border-bottom:2px solid #ccc;
-  margin: 5px 0;
+.memo1 {
+  width: 100px;
+  margin-left: 20px;
 }
+.memo2 {
+  width: 60%;
+}
+.memo3 {
+  width: 50px;
+  margin-right: 20px;
+}
+
 // .memo-content {} メモの内容
 // .task-ed-btn {} メモ削除
 
