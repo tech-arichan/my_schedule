@@ -2,7 +2,7 @@ class StoragesController < ApplicationController
   before_action :set_storage, only: [:edit, :show]
 
   def index
-    @storages = Storage.all
+    @storages = Storage.includes(:user)
   end
 
   def new
