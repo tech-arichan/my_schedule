@@ -39,7 +39,7 @@
 .account-page .account-page__header .btn {
   margin-top: 20px;
   color: #fff;
-  background-color: #ccc;
+  background-color: rgb(124, 122, 122);
   font-size: 14px;
 }
 .account-page .field {
@@ -74,6 +74,14 @@
   margin-top: 20px;
   color: #fff;
   background-color: #38aef0;
+}
+.guest-btn {
+  float: left;
+  font-size: 20px;
+  // padding: 5px;
+  margin-top: 30px;
+  // color: #fff;
+  // background-color: #38aef0;
 }
 .account-page .field-label .field_with_errors {
   display: inline-block;
