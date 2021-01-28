@@ -5,4 +5,4 @@ class Priority < ActiveHash::Base
     { id: 3, name: '中' },
     { id: 4, name: '高' }
   ]
- end
+end

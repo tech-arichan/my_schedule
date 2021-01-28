@@ -8,5 +8,6 @@ class Task < ApplicationRecord
     validates :title
     validates :deadline
     validates :priority_id, numericality: { other_than: 1 }
+    validates :user_id
   end
 end

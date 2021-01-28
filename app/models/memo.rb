@@ -1,4 +1,8 @@
 class Memo < ApplicationRecord
   belongs_to :user
-  validates :memo, presence: true
+
+  with_options presence: true do
+    validates :memo
+    validates :user_id
+  end
 end
