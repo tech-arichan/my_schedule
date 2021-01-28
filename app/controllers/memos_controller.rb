@@ -1,6 +1,6 @@
 class MemosController < ApplicationController
   def index
-    @memos = Memo.all
+    @memos = Memo.includes(:user)
   end
 
   def new

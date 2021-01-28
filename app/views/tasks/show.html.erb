@@ -13,6 +13,7 @@
     <h2 class="show-title"> [詳細] <%= @task.detail %> </h2>
     <h2 class="show-title"> [締切日] <%= @task.deadline.strftime("%Y/%m/%d %H:%M") %> </h2>
     <h2 class="show-title"> [タスク登録日] <%= @task.created_at.strftime("%Y/%m/%d") %> </h2>
+    <h2 class="show-title"> [登録者] <%= @task.user.name %> </h2>
     <div class="show-footer">
       <div class="footer-ed">
         <p>

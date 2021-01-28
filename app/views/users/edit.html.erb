@@ -6,6 +6,7 @@
       <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: 'btn'%>
       <%= link_to "トップに戻る", :back, class: 'btn'%>
     </div>
+    <% if current_user.email != 'guest@example.com' %>
     <div class='account-page__inner--right user-form'>
       <%= form_with model: current_user, local: true do |f|%>
         <div class='field'>
@@ -29,5 +30,6 @@
         </div>
       <% end %>
     </div>
+    <% end %>
   </div>
 </div>

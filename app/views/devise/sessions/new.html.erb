@@ -4,6 +4,11 @@
       <h2>Log in</h2>
       <h5>登録しているユーザーでログイン</h5>
       <%= render "devise/shared/links"%>
+
+      <div class=''>
+        <%= link_to "ゲストログイン", users_guest_sign_in_path, class: 'guest-btn', method: :post%>
+      </div>
+
     </div>
     <div class='account-page__inner--right user-form'>
       <%= form_with model: resource, as: resource_name, url: session_path(resource_name), local: true do |f|%>
