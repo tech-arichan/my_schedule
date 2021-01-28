@@ -8,8 +8,8 @@ class MemosController < ApplicationController
   end
 
   def create
-    memo = Memo.new(memo_parameter)
-    if memo.save
+    @memo = Memo.new(memo_parameter)
+    if @memo.save
       redirect_to memos_path
     else
       redirect_to new_memo_path
