@@ -5,6 +5,5 @@ class Storage < ApplicationRecord
   with_options presence: true do
     validates :title
     validates :images
-    validates :user_id
   end
 end
