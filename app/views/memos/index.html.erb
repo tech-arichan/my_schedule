@@ -9,21 +9,19 @@
     </div>
   </div>
 
-  <div class="task-main">
+  <div class="memo-main">
     <div class="table-memo">
       <ul class="table-memo-font-size">
-        <li class="memo1"><p>登録者</p></li>
-        <li class="memo2"><p>メモ内容</p></li>
-        <li class="memo3"><p></p></li>
+        <li class="memo1"><p>＜内容＞</p></li>
+        <li class="memo2"><p></p></li>
       </ul>
     </div>
   
     <% @memos.reverse_each do |memo| %>
       <div class="table-memo">
         <ul>
-          <li class="memo1"><p><%= memo.user.name %></p></li>
-          <li class="memo2"><p><%= memo.memo %></p></li>
-          <li class="memo3"><p><%= link_to '削除', memo_path(memo.id), method: :delete %></p></li>
+          <li class="memo1"><p><%= memo.memo %></p></li>
+          <li class="memo2"><p><%= link_to '削除', memo_path(memo.id), method: :delete %></p></li>
         </ul>
       </div>
     <% end %>

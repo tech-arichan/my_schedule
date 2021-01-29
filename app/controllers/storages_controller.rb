@@ -10,7 +10,7 @@ class StoragesController < ApplicationController
   end
 
   def create
-    @storage = Storage.new(storage_parameter)
+    @storage = Storage.new(storage_params)
     if @storage.save
       redirect_to storages_path
     else
@@ -31,7 +31,7 @@ class StoragesController < ApplicationController
 
   def update
     storage = Storage.find(params[:id])
-    storage.update(storage_parameter)
+    storage.update(storage_params)
     redirect_to storages_path
   end
 
@@ -40,7 +40,7 @@ class StoragesController < ApplicationController
 
   private
 
-  def storage_parameter
+  def storage_params
     params.require(:storage).permit(:title, :detail, images: []).merge(user_id: current_user.id )
   end
 
