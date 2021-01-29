@@ -3,6 +3,5 @@ class Memo < ApplicationRecord
 
   with_options presence: true do
     validates :memo
-    validates :user_id
   end
 end

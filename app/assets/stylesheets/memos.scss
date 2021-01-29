@@ -26,43 +26,34 @@
   align-items: center;
 }
 
+.memo-main {
+  margin: 15px;
+
+}
+
 .table-memo-font-size {
   font-weight: bold;
   font-size: large;
 }
 .table-memo>ul {
-  width: 97vw;
+  width: 80vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0;
-  margin: 0;
+  margin: auto;
   list-style: none;
   border-bottom:2px solid #ccc;
 }
-.table-memo>ul>li {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  // float: left;
-  // width: 30%;
-  position: relative;
-}
 
 .memo1 {
-  width: 100px;
+  width: 70vw;
   margin-left: 20px;
 }
 .memo2 {
-  width: 60%;
-}
-.memo3 {
   width: 50px;
   margin-right: 20px;
 }
 
-// .memo-content {} メモの内容
-// .task-ed-btn {} メモ削除
 
 //------------//
 
