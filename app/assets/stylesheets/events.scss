@@ -8,6 +8,8 @@
 
 .wrapper {
   display: flex;
+  height: 100vh;
+  width: 100vw;
 }
 
 //サイドバー
@@ -50,6 +52,7 @@
 .main {
   background-color: #FFFFFF;
   width: calc(100vw - 150px);
+  // height: 100vh;
 }
 
 //メイン上部
@@ -92,15 +95,15 @@
   display: flex;
   justify-content: space-between;
 }
+.simple-calendar {
+  height: 455px;
+}
 //---------------//
 
 //--メイン下部--//
 .main-footer {
-  background-color: #DDDDDD;
-  height: 90px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  background-color: #dddddd;
+  height: calc(100vh - 100px - 455px);
 }
 //---------------//
 
