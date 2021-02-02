@@ -1,5 +1,3 @@
-README.md
-
 # アプリ名
 - GroupSKD
 
