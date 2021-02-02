@@ -86,7 +86,7 @@ README.md
 ## 新規登録画面
 
 ## イベント機能
-[![イベント追加](https://gyazo.com/9693eda2cfbd98ed3a3d8a8fe65b21b9)](https://i.gyazo.com/66df2389b8eb2d3886150acad0303874.mp4)
+[![イベント追加](https://i.gyazo.com/66df2389b8eb2d3886150acad0303874.mp4)](https://i.gyazo.com/66df2389b8eb2d3886150acad0303874.mp4)
 ## メモ機能
 
 ## タスク機能
