@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :storage do
-    title  {"テスト"}
+    title  {"test"}
     detail {"テスト、詳細"}
     association :user 
 
