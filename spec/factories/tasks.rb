@@ -1,8 +1,8 @@
 FactoryBot.define do
   factory :task do
-    title       {"テスト、タイトル"}
+    title       {"test"}
     deadline    {Faker::Time.between(from: DateTime.now - 1, to: DateTime.now)}
-    detail      {"テスト、詳細"}
+    detail      {"test detail"}
     priority_id {2}
     association :user 
   end
