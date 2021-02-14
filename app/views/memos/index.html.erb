@@ -22,7 +22,9 @@
       </div>
     <% end %>
   </div>
-    
+  
+  
+  <div class="memo-footer">
   <%= form_with model: @memo, local: true do |form| %>
     <div class="memo-form">
       <div class="memo-form-input">
@@ -31,4 +33,5 @@
       <%= form.submit "登録", class: "form-memo-submit"%>
     </div>
   <% end %>
+  </div>
 </div>

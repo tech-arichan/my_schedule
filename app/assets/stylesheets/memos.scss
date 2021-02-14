@@ -6,7 +6,7 @@
 
 .memo-header {
   height: 100px;
-  padding: 10px 50px;
+  padding: 0 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -38,7 +38,7 @@
 
 .memo-main {
   height: calc(100vh - 100px - 90px);
-  padding: 30px 40px 0;
+  padding: 0 40px;
   overflow: scroll;
 }
 
@@ -78,8 +78,11 @@
   padding-left: 50px;
 }
 
-.memo-form {
+.memo-footer {
   height: 90px;
+}
+
+.memo-form {
   padding: 20px 40px;
   display: flex;
 }
