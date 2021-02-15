@@ -15,6 +15,11 @@
  *= require_self
  */
 
- html {
+html {
   background: rgb(226, 226, 231);
- }
+}
+
+.main-background {
+  background: rgb(226, 226, 231);
+  height: 100vh;
+}

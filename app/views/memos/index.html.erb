@@ -1,29 +1,37 @@
 <div class="main-background">
   <div class="memo-header">
-    <div class="memo-head-right">
-      <h1 class="memo-title">メモ一覧</h1>
-      <h2><%= link_to '新規メモ', new_memo_path %></h2>
-    </div>
     <div class="memo-head-left">
+      <h1 class="memo-title">メモ一覧</h1>
+    </div>
+    <div class="memo-head-right">
       <h2><%= link_to 'トップへ戻る', root_path %></h2>
     </div>
   </div>
 
   <div class="memo-main">
-    <div class="table-memo">
-      <ul class="table-memo-font-size">
-        <li class="memo1"><p>＜内容＞</p></li>
-        <li class="memo2"><p></p></li>
-      </ul>
-    </div>
-  
     <% @memos.reverse_each do |memo| %>
-      <div class="table-memo">
-        <ul>
-          <li class="memo1"><p><%= memo.memo %></p></li>
-          <li class="memo2"><p><%= link_to '削除', memo_path(memo.id), method: :delete %></p></li>
-        </ul>
+      <div class="memos">
+        <div class="upper-memo">
+          <div class="memo-user"><%= memo.user.name %></div>
+          <div class="memo-date"><%= memo.created_at.strftime("%Y/%m/%d") %></div>
+          <div class="memo-delete"><%= link_to '削除', memo_path(memo.id), method: :delete %></div>
+        </div>
+        <div class="lower-memo">
+          <div class="memo-content"><%= memo.memo %></div>
+        </div>
       </div>
     <% end %>
+  </div>
+  
+  
+  <div class="memo-footer">
+  <%= form_with model: @memo, local: true do |form| %>
+    <div class="memo-form">
+      <div class="memo-form-input">
+        <%= form.text_field :memo, placeholder: "メモ入力", class: "form-memo" %>
+      </div>
+      <%= form.submit "登録", class: "form-memo-submit"%>
+    </div>
+  <% end %>
   </div>
 </div>

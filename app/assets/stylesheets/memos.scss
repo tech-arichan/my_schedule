@@ -5,58 +5,106 @@
 // メモ トップ
 
 .memo-header {
+  height: 100px;
+  padding: 0 50px;
   display: flex;
   justify-content: space-between;
-  padding: 5px 20px;
-  border-bottom:2px solid gray;
-}
-
-.memo-head-right {
-  display: flex;
   align-items: center;
 }
 
-.memo-title {
-  font-size: 30px;
-  margin-right: 20px;
+.memo-head-left{
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 35px;
 }
 
-.memo-head-left {
-  display: flex;
-  align-items: center;
+.memo-head-left a {
+  font-size: 20px;
+  text-decoration: none;
+  color: #333;
+  border: 1px solid #333;
+  margin: 0 20px;
+  padding: 10px 20px;
+}
+
+.memo-head-right a {
+  text-decoration: none;
+  font-size: 20px;
+  padding: 10px 20px;
+  color: #333;
 }
 
 .memo-main {
-  margin: 15px;
-
+  height: calc(100vh - 100px - 90px);
+  padding: 0 40px;
+  overflow: scroll;
 }
 
-.table-memo-font-size {
-  font-weight: bold;
-  font-size: large;
-}
-.table-memo>ul {
-  width: 80vw;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin: auto;
-  list-style: none;
+.memos {
+  margin: 10px 0 0 0;
   border-bottom:2px solid #ccc;
 }
 
-.memo1 {
-  width: 70vw;
+.upper-memo {
+  display: flex;
+}
+
+.memo-user {
+  color: #434a54;
+  font-size: 17px;
+}
+
+.memo-date {
+  color: #999;
+  font-size: 14px;
+  padding-left: 10px;
+}
+
+.lower-memo {
+  margin-top: 5px;
+}
+
+.memo-content {
+  color: #434a54;
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.memo-delete {
+  color: #434a54;
+  font-size: 14px;
+  padding-left: 50px;
+}
+
+.memo-footer {
+  height: 90px;
+}
+
+.memo-form {
+  padding: 20px 40px;
+  display: flex;
+}
+
+.memo-form-input {
+  // background-color: white;
+  width: 100%;
+}
+
+.form-memo {
+  border: none;
+  height: 50px;
+  width: 100%;
+  padding-left: 10px;
+}
+
+.form-memo-submit {
+  background-color: #48a9e0;
+  border: none;
+  color: white;
+  font-size: 16px;
+  height: 50px;
   margin-left: 20px;
-}
-.memo2 {
-  width: 50px;
-  margin-right: 20px;
-}
-
-
-//------------//
-
-.edit-btn {
-  padding: 0 0 0 10px;
+  padding: 0 20px;
 }
