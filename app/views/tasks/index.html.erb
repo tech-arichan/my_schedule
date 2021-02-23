@@ -10,7 +10,8 @@
       <h2><%= link_to 'トップへ戻る', root_path, class: "task-head-right" %></h2>
     </div>
   </div>
-  <div class="task-main">
+
+  <div class="table-main-title">
     <div class="table-title">
       <ul class="table-title-font-size">
         <li><p>タイトル</p></li>
@@ -20,6 +21,9 @@
         <li><p></p></li>
       </ul>
     </div>
+  </div>
+
+  <div class="task-main">
     <% @tasks.reverse_each do |task| %>
       <div class="table-title">
         <ul>

@@ -2,6 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+//header
 .task-header {
   height: 100px;
   display: flex;
@@ -34,21 +35,29 @@
   color: #333;
 }
 
-.task-main {
-  margin: 15px;
+// main
+
+.table-main-title {
+  height: 60px;
 }
+
 .table-title-font-size {
   font-weight: bold;
   font-size: large;
+}
+
+.task-main {
+  height: calc(100vh - 100px - 60px);
+  overflow: scroll;
 }
 .table-title>ul {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  padding: 0;
-  margin: 0;
+  padding: 5px;
+  margin: 0px 10px;
   list-style: none;
-  border-bottom:2px solid #ccc;
+  border-bottom:1px solid #ccc;
 }
 
 .table-title>ul>li {
