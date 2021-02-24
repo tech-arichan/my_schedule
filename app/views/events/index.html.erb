@@ -1,10 +1,61 @@
 <div class="wrapper">
   
   <div class="side-bar">
-    <%= render "side_bar" %>
+    <div class="side-bar-header">
+      <div class="header-name">
+        Groupskd
+      </div>
+    </div>
+
+    <div class="side-main">
+
+      <div class="others">
+        <div class="other-name">
+          <%= link_to 'タスク', tasks_path %>
+        </div>
+      </div>
+      <div class="others">
+        <div class="other-name">
+          <%= link_to 'メモ', memos_path %>
+        </div>
+      </div>
+      <div class="others">
+        <div class="other-name">
+          <%= link_to '資料庫', storages_path %>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div class="main">
-    <%= render "main" %>
+    <div class="main-header">
+      <div class="left-header">
+          <%= link_to 'イベント追加', new_event_path, class: "add-event"%>
+      </div>
+      <div class="right-header">
+        <div class="header-button">
+        <%= link_to current_user.name, edit_user_path(current_user) %>
+
+        </div>
+      </div>
+    </div>
+
+      <%= month_calendar events: @events do |date, events| %>
+        <%= date.day %>
+
+        <% events.each do |event| %>
+        <div>
+          <%= link_to "#{event.title}", event_path(event.id), method: :get  %>
+        </div>
+
+        <% end %>
+      <% end %>
+
+
+    <div class="main-footer">
+      <div class="">
+        <%# 未定 %>
+      </div>
+    </div>
   </div>
 </div>
