@@ -1,10 +1,128 @@
 <div class="wrapper">
-  
+  <%# サイドバー %>
   <div class="side-bar">
-    <%= render "side_bar" %>
-  </div>
+    <div class="side-bar-head">
+      <div class="header-name">
+        Groupskd
+      </div>
+    </div>
 
-  <div class="main">
-    <%= render "main" %>
+    <div class="side-bar-main">
+      <div class="others">
+        <div class="other-name">
+          <%= link_to 'タスク', tasks_path %>
+        </div>
+      </div>
+      <div class="others">
+        <div class="other-name">
+          <%= link_to 'メモ', memos_path %>
+        </div>
+      </div>
+      <div class="others">
+        <div class="other-name">
+          <%= link_to '資料庫', storages_path %>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-bar-foot">
+      <div class="">
+      </div>
+    </div>
   </div>
+  <%#// サイドバー //%>
+  
+  <%# メインカレンダー %>
+  <div class="main">
+    <div class="main-header">
+      <div class="left-header">
+          <%= link_to 'イベント追加', new_event_path, class: "add-event"%>
+      </div>
+      <div class="right-header">
+        <div class="header-button">
+        <%= link_to current_user.name, edit_user_path(current_user) %>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="main-body">
+      <div class="calendar-header">
+        <p id="prev">&laquo;</p>
+        <p id="title">2020/05</p>
+        <p id="next">&raquo;</p>
+        <p id="today">today</p>
+      </div>
+      <table class="calendar-table">
+        <thead class="week">
+          <tr>
+            <th>日</th>
+            <th>月</th>
+            <th>火</th>
+            <th>水</th>
+            <th>木</th>
+            <th>金</th>
+            <th>土</th>
+          </tr>
+        </thead>
+        
+        <tbody class="days">
+          <tr>
+            <td class="disabled">1</td>
+            <td class="disabled">1</td>
+            <td class="disabled">1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>1</td>
+            <td class="today">1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td class="disabled">1</td>
+            <td class="disabled">1</td>
+            <td class="disabled">1</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+      <div class="calendar-footer">
+        <div class="">
+          < 未定 >
+        </div>
+      </div>
+  </div>
+  <%#//// メインカレンダー ////%>
+
+<%# ---------一旦削除------------ %>
+      <%# <%= month_calendar events: @events do |date, events| >
+        <%= date.day >
+        <% events.each do |event| >
+        <div>
+          <%= link_to "#{event.title}", event_path(event.id), method: :get  >
+        </div>
+        <% end >
+      <% end > %>
+<%# ------------------------------ %>
+
 </div>
